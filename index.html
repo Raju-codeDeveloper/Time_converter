@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeConverter</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .wrapper{
+            background: url(https://assets.ccbp.in/frontend/dynamic-webapps/time-converter-bg.png);
+            height: 110vh;
+            background-size: center cover;
+            padding: 50px;
+        }
+        .container{
+            /* margin: 20px; */
+        }
+        .mainTitle{
+            color: #ffff;
+            font-size: 86px;
+            font-weight: bold;
+            margin-bottom: 7px; 
+        }
+        .para{
+            color: #ffff;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        .inputs{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .inputBox{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+        label{
+            color: #ffff;
+            font-size: 23px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        input {
+            width: 373px;
+            height: 44px;
+            border-radius: 14px;
+            border: none;
+            padding: 13px;
+            padding-left: 20px;
+            font-size: 23px;
+            font-weight: bold;
+        }
+        #converter{
+            width: 210px;
+            height: 55px;
+            background-color: #ffff;
+           color: #4b3535;
+            border-radius: 7px;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.6s;
+        }
+        #converter:hover{
+            
+            background-color: rgb(214, 213, 213);
+            border:4px solid rgb(67, 66, 66);
+           color: #4b3535;
+            border-radius: 7px;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .output-text {
+            color: rgb(196, 196, 196);
+            font-size: 21px;
+            font-weight: lighter;
+            margin-top: 10px;
+        } 
+        .output-time{
+            border: 2px solid#ffff;
+            width: 260px;
+            margin: 40px;
+            height: 50px;
+            padding: 5px;
+            text-align: center;
+            font-size: 30px;
+            color: rgb(224, 221, 221);
+            border-radius: 14px;
+        }  
+
+    </style>
+
+</head>
+<body>
+    <section class="wrapper">
+
+        <div class="container">
+
+            <p class="mainTitle">
+                Time
+                <br> Converter
+            </p>
+            
+            <p class="para">Enter hours and minutes
+                <br> values to convert into 
+                <br>
+                seconds</p>
+
+            <form  class="inputs">
+
+                <div class="inputBox">
+                <label for="hour">Hours*</label>
+                <input type="number" id="hour">
+                </div>
+
+                <div class="inputBox">
+                <label for="minute">Minutes*</label>
+                <input type="number" id="minute">
+                </div>
+            </form>
+
+            <button id="converter">
+                Convert to Seconds
+            </button>
+
+            <div id="output">
+               
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
